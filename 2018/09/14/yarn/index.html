@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>yarn | 田琪的博客 | 前端新人</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="yarn命令使用yarn 常用命令   修改日期 2017.12.26  最初接触 yarn 还是在 0.17.10 版本，由于各种各样的原因，使用时没 npm 顺手, 目前 yarn 的版本已经升级为 1.3.2 各种之前遇到的问题不复存在，安装、下载速度都比 npm 要快很多，这里对之前记录做一下修改。  更多详细内容查看中文官方文档  npm 常用命令  版本说明 （当前文档使用版本） ya">
+<meta name="keywords" content="前端">
+<meta property="og:type" content="article">
+<meta property="og:title" content="yarn">
+<meta property="og:url" content="https://qitiandear.github.io/2018/09/14/yarn/index.html">
+<meta property="og:site_name" content="田琪的博客">
+<meta property="og:description" content="yarn命令使用yarn 常用命令   修改日期 2017.12.26  最初接触 yarn 还是在 0.17.10 版本，由于各种各样的原因，使用时没 npm 顺手, 目前 yarn 的版本已经升级为 1.3.2 各种之前遇到的问题不复存在，安装、下载速度都比 npm 要快很多，这里对之前记录做一下修改。  更多详细内容查看中文官方文档  npm 常用命令  版本说明 （当前文档使用版本） ya">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-09-14T08:34:14.157Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="yarn">
+<meta name="twitter:description" content="yarn命令使用yarn 常用命令   修改日期 2017.12.26  最初接触 yarn 还是在 0.17.10 版本，由于各种各样的原因，使用时没 npm 顺手, 目前 yarn 的版本已经升级为 1.3.2 各种之前遇到的问题不复存在，安装、下载速度都比 npm 要快很多，这里对之前记录做一下修改。  更多详细内容查看中文官方文档  npm 常用命令  版本说明 （当前文档使用版本） ya">
+    
+        <link rel="alternate" type="application/atom+xml" title="田琪的博客" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">田琪</h5>
+          <a href="mailto:1307905648@qq.com" title="1307905648@qq.com" class="mail">1307905648@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/qitiandear" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://weibo.com/u/6395650305/home" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                测试
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">yarn</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">yarn</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-09-14T07:49:06.000Z" itemprop="datePublished" class="page-time">
+  2018-09-14
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#yarn命令使用"><span class="post-toc-number">1.</span> <span class="post-toc-text">yarn命令使用</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#yarn-常用命令"><span class="post-toc-number">2.</span> <span class="post-toc-text">yarn 常用命令</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#版本说明-（当前文档使用版本）"><span class="post-toc-number">3.</span> <span class="post-toc-text">版本说明 （当前文档使用版本）</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#安装"><span class="post-toc-number">4.</span> <span class="post-toc-text">安装</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#1-开始一个新工程"><span class="post-toc-number">5.</span> <span class="post-toc-text">1. 开始一个新工程</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#2-添加一个依赖"><span class="post-toc-number">6.</span> <span class="post-toc-text">2. 添加一个依赖</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#3-更新一个依赖"><span class="post-toc-number">7.</span> <span class="post-toc-text">3. 更新一个依赖</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#4-移除一个依赖"><span class="post-toc-number">8.</span> <span class="post-toc-text">4. 移除一个依赖</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#5-安装-package-json-中的所有文件"><span class="post-toc-number">9.</span> <span class="post-toc-text">5. 安装 package.json 中的所有文件</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#6-运行脚本"><span class="post-toc-number">10.</span> <span class="post-toc-text">6. 运行脚本</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#7-显示某个包信息"><span class="post-toc-number">11.</span> <span class="post-toc-text">7. 显示某个包信息</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#8-列出项目的所有依赖"><span class="post-toc-number">12.</span> <span class="post-toc-text">8. 列出项目的所有依赖</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#9-管理-yarn-配置文件"><span class="post-toc-number">13.</span> <span class="post-toc-text">9. 管理 yarn 配置文件</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#10-缓存"><span class="post-toc-number">14.</span> <span class="post-toc-text">10. 缓存</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#11-问题"><span class="post-toc-number">15.</span> <span class="post-toc-text">11. 问题</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#1-通过-yarn-run-等运行脚本时，会报错"><span class="post-toc-number">15.1.</span> <span class="post-toc-text">1. 通过 yarn run 等运行脚本时，会报错</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#2-安装-package-json-中文件的问题"><span class="post-toc-number">15.2.</span> <span class="post-toc-text">2. 安装 package.json 中文件的问题</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#说明"><span class="post-toc-number">16.</span> <span class="post-toc-text">说明</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#3-在-yarn-或者-npm-中设置默认版本规则"><span class="post-toc-number">17.</span> <span class="post-toc-text">3. 在 yarn 或者 npm 中设置默认版本规则</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#12-总结"><span class="post-toc-number">18.</span> <span class="post-toc-text">12. 总结</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-yarn"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">yarn</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-09-14 15:49:06" datetime="2018-09-14T07:49:06.000Z"  itemprop="datePublished">2018-09-14</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="yarn命令使用"><a href="#yarn命令使用" class="headerlink" title="yarn命令使用"></a>yarn命令使用</h1><h1 id="yarn-常用命令"><a href="#yarn-常用命令" class="headerlink" title="yarn 常用命令"></a>yarn 常用命令</h1><blockquote>
+<p>  修改日期 2017.12.26<br>  最初接触 yarn 还是在 0.17.10 版本，由于各种各样的原因，使用时没 npm 顺手, 目前 yarn 的版本已经升级为 1.3.2 各种之前遇到的问题不复存在，安装、下载速度都比 npm 要快很多，这里对之前记录做一下修改。<br>  更多详细内容查看中文官方文档<br>  npm 常用命令</p>
+</blockquote>
+<h1 id="版本说明-（当前文档使用版本）"><a href="#版本说明-（当前文档使用版本）" class="headerlink" title="版本说明 （当前文档使用版本）"></a>版本说明 （当前文档使用版本）</h1><ul>
+<li><del>yarn : v0.17.10</del></li>
+<li>yarn: v1.3.2 (修改日期 2017.12.26)</li>
+<li>node: v8.9.0</li>
+<li>npm: v5.6.0</li>
+</ul>
+<h1 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h1><blockquote>
+<ol>
+<li>macOS 通过 homebrew 安装 brew install yarn</li>
+<li>Windows 下载安装 下载地址</li>
+<li>查看版本 yarn –version</li>
+</ol>
+</blockquote>
+<h1 id="1-开始一个新工程"><a href="#1-开始一个新工程" class="headerlink" title="1. 开始一个新工程"></a>1. 开始一个新工程</h1><blockquote>
+<p>  <font color="red">yarn init</font> 与 <font color="red">npm init</font> 一样通过交互式会话创建一个 <font color="red">package.json</font><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">yarn init # yarn</span><br><span class="line">npm init # npm</span><br><span class="line"></span><br><span class="line"># 跳过会话，直接通过默认值生成 package.json</span><br><span class="line">yarn init --yes # 简写 -y</span><br><span class="line">npm init -y</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h1 id="2-添加一个依赖"><a href="#2-添加一个依赖" class="headerlink" title="2. 添加一个依赖"></a>2. 添加一个依赖</h1><blockquote>
+<p> 通过 yarn add 添加依赖会更新 package.json 以及 yarn.lock 文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">yarn add &lt;packageName&gt; 依赖会记录在 package.json 的 dependencies 下</span><br><span class="line">yarn add webpack@2.3.3 # yarn  --save 是 yarn 默认的，默认记录在 package.json 中</span><br><span class="line">npm install webpack@2.3.3 --save # npm</span><br><span class="line"></span><br><span class="line">yarn add &lt;packageName&gt; --dev 依赖会记录在 package.json 的 devDependencies 下</span><br><span class="line">yarn add webpack --dev # yarn 简写 -D</span><br><span class="line">npm install webpack --save-dev # npm</span><br><span class="line">yarn global add &lt;packageName&gt;</span><br><span class="line">yarn global add webpack # yarn</span><br><span class="line">npm install webpack -g # npm</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h1 id="3-更新一个依赖"><a href="#3-更新一个依赖" class="headerlink" title="3. 更新一个依赖"></a>3. 更新一个依赖</h1><blockquote>
+<p>yarn upgrade 用于更新包到基于规范范围的最新版本<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">yarn upgrade # 升级所有依赖项，不记录在 package.json 中</span><br><span class="line">npm update # npm 可以通过 ‘--save|--save-dev’ 指定升级哪类依赖</span><br><span class="line"></span><br><span class="line">yarn upgrade webpack # 升级指定包</span><br><span class="line">npm update webpack --save-dev # npm</span><br><span class="line"></span><br><span class="line">yarn upgrade --latest # 忽略版本规则，升级到最新版本，并且更新 package.json</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h1 id="4-移除一个依赖"><a href="#4-移除一个依赖" class="headerlink" title="4. 移除一个依赖"></a>4. 移除一个依赖</h1><blockquote>
+<p>yarn remove <packagename><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yarn remove webpack # yarn</span><br><span class="line">npm uninstall webpack --save # npm 可以指定 --save | --save-dev</span><br></pre></td></tr></table></figure></packagename></p>
+</blockquote>
+<h1 id="5-安装-package-json-中的所有文件"><a href="#5-安装-package-json-中的所有文件" class="headerlink" title="5. 安装 package.json 中的所有文件"></a>5. 安装 package.json 中的所有文件</h1><blockquote>
+<p>  yarn 或者 yarn install<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">yarn install # 或者 yarn 在 node_modules 目录安装 package.json 中列出的所有依赖</span><br><span class="line">npm install # npm</span><br><span class="line"></span><br><span class="line"># yarn install 安装时，如果 node_modules 中有相应的包则不会重新下载 --force 可以强制重新下载安装</span><br><span class="line">yarn install --force # 强制下载安装</span><br><span class="line">npm install --force # npm</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h1 id="6-运行脚本"><a href="#6-运行脚本" class="headerlink" title="6. 运行脚本"></a>6. 运行脚本</h1><blockquote>
+<p>yarn run 用来执行在 package.json 中 scripts 属性下定义的脚本<br><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// package.json</span><br><span class="line">&#123;</span><br><span class="line">    <span class="attr">"scripts"</span>: &#123;</span><br><span class="line">        <span class="attr">"dev"</span>: <span class="string">"node app.js"</span>,</span><br><span class="line">        <span class="attr">"start"</span>: <span class="string">"node app.js"</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">yarn run dev # yarn 执行 dev 对应的脚本 node app.js</span><br><span class="line">npm run # npm</span><br><span class="line">yarn start # yarn</span><br><span class="line">npm start # npm</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p>与 npm 一样 可以有 yarn start 和 yarn test 两个简写的运行脚本方式</p>
+</blockquote>
+<h1 id="7-显示某个包信息"><a href="#7-显示某个包信息" class="headerlink" title="7. 显示某个包信息"></a>7. 显示某个包信息</h1><blockquote>
+<p>yarn info <packagename> 可以用来查看某个模块的最新版本信息<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">yarn info webpack # yarn</span><br><span class="line">npm info webpack # npm</span><br><span class="line"></span><br><span class="line">yarn info webpack --json # 输出 json 格式</span><br><span class="line">npm info webpack  --json # npm</span><br><span class="line"></span><br><span class="line">yarn info webpack readme # 输出 README 部分</span><br><span class="line">npm info webpack readme</span><br></pre></td></tr></table></figure></packagename></p>
+</blockquote>
+<h1 id="8-列出项目的所有依赖"><a href="#8-列出项目的所有依赖" class="headerlink" title="8. 列出项目的所有依赖"></a>8. 列出项目的所有依赖</h1><blockquote>
+<p>yarn list<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">yarn list # 列出当前项目的依赖</span><br><span class="line">npm list # npm</span><br><span class="line"></span><br><span class="line">yarn list --depth=0 # 限制依赖的深度</span><br><span class="line">sudo yarn global list # 列出全局安装的模块</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h1 id="9-管理-yarn-配置文件"><a href="#9-管理-yarn-配置文件" class="headerlink" title="9. 管理 yarn 配置文件"></a>9. 管理 yarn 配置文件</h1><blockquote>
+<p>yarn coinfig<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">yarn config set key value # 设置</span><br><span class="line">npm config set key value</span><br><span class="line"></span><br><span class="line">yarn config get key # 读取值</span><br><span class="line">npm config get key</span><br><span class="line"></span><br><span class="line">yarn config delete key # 删除</span><br><span class="line">npm config delete key</span><br><span class="line"></span><br><span class="line">yarn config list # 显示当前配置</span><br><span class="line">npm config list</span><br><span class="line"></span><br><span class="line">yarn config set registry https://registry.npm.taobao.org # 设置淘宝镜像</span><br><span class="line">npm config set registry https://registry.npm.taobao.org # npm</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h1 id="10-缓存"><a href="#10-缓存" class="headerlink" title="10. 缓存"></a>10. 缓存</h1><blockquote>
+<p>yarn cache<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo yarn cache list # 列出已缓存的每个包</span><br><span class="line">sudo yarn cache dir # 返回 全局缓存位置</span><br><span class="line">sudo yarn cache clean # 清除缓存</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h1 id="11-问题"><a href="#11-问题" class="headerlink" title="11. 问题"></a>11. 问题</h1><h2 id="1-通过-yarn-run-等运行脚本时，会报错"><a href="#1-通过-yarn-run-等运行脚本时，会报错" class="headerlink" title="1. 通过 yarn run 等运行脚本时，会报错"></a><del>1. 通过 yarn run 等运行脚本时，会报错</del></h2><blockquote>
+<p>更新版本后，这个问题不会再出现<br>yarn run run<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">yarn run v0.17.10</span><br><span class="line">$ webpack-dev-server --progress --colors --config webpack.dev.config.js</span><br><span class="line">fs.js:640</span><br><span class="line">  return binding.open(pathModule._makeLong(path), stringToFlags(flags), mode);</span><br><span class="line">                 ^</span><br><span class="line">Error: EACCES: permission denied, open &apos;/Users/zhangmingjia/Desktop/document/ceshi/temp/router4-test/</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>大概意思是没有权限，然后加上 sudo 又试了一下<br>sudo yarn run run<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">yarn run v0.17.10</span><br><span class="line">$ webpack-dev-server --progress --colors --config webpack.dev.config.js</span><br><span class="line"> 10% building modules 2/2 modules 0 active</span><br><span class="line">Project is running at http://10.15.32.78:8087/</span><br><span class="line">webpack output is served from /Users/zhangmingjia/Desktop/document/ceshi/temp/router4-test/dev</span><br><span class="line">Content not from webpack is served from /Users/zhangmingjia/Desktop/document/ceshi/temp/router4-test/dev</span><br><span class="line">404s will fallback to /index.html</span><br><span class="line">Hash: d374085597660a7a1085</span><br><span class="line">Version: webpack 2.3.3</span><br><span class="line">Time: 5083ms</span><br><span class="line">              Asset      Size  Chunks                    Chunk Names</span><br><span class="line">       js/vendor.js   1.31 MB       0  [emitted]  [big]  vendor</span><br><span class="line">       js/bundle.js   44.5 kB       1  [emitted]         app</span><br><span class="line">chunk-manifest.json  43 bytes          [emitted]</span><br><span class="line">     js/manifest.js   5.88 kB       2  [emitted]         manifest</span><br><span class="line">   js/vendor.js.map   1.56 MB       0  [emitted]         vendor</span><br><span class="line">   js/bundle.js.map   43.3 kB       1  [emitted]         app</span><br><span class="line"> js/manifest.js.map    5.9 kB       2  [emitted]         manifest</span><br><span class="line">         index.html   1.28 kB          [emitted]</span><br><span class="line">Child html-webpack-plugin for &quot;index.html&quot;:</span><br><span class="line">         Asset    Size  Chunks  Chunk Names</span><br><span class="line">    index.html  545 kB       0</span><br><span class="line">webpack: Compiled successfully.</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>看了别人的博客，貌似没有这个问题啊，而且设置的 webpack devServer.open = true, 可以打开浏览器，但是不会跳转到设定好的页面（用 npm 时 没有这个问题）</p>
+</blockquote>
+<h2 id="2-安装-package-json-中文件的问题"><a href="#2-安装-package-json-中文件的问题" class="headerlink" title="2. 安装 package.json 中文件的问题"></a>2. 安装 package.json 中文件的问题</h2><blockquote>
+<p>正常安装 sudo yarn add <a href="mailto:react@15.4.2" target="_blank" rel="noopener">react@15.4.2</a> package.json 中 出现<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">"dependencies": &#123;</span><br><span class="line">    "react": "15.4.2"</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>通过终端查看安装版本 yarn list<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">├─ react@15.4.2</span><br><span class="line">│  ├─ fbjs@^0.8.4</span><br><span class="line">│  ├─ loose-envify@^1.1.0</span><br><span class="line">│  └─ object-assign@^4.1.0</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>是正确的版本，但是，如果在 package.json 中加上如下依赖，然后通过 sudo yarn install 安装<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&quot;dependencies&quot;: &#123;</span><br><span class="line">    &quot;react&quot;: &quot;15.4.2&quot;,</span><br><span class="line">    &quot;react-dom&quot;: &quot;^15.4.2&quot;,</span><br><span class="line">    &quot;jquery&quot;: &quot;^3.0.0&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>通过终端查看安装版本 yarn list<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">├─ react-dom@15.5.3</span><br><span class="line">│  ├─ fbjs@^0.8.9</span><br><span class="line">│  ├─ loose-envify@^1.1.0</span><br><span class="line">│  ├─ object-assign@^4.1.0</span><br><span class="line">│  └─ prop-types@~15.5.0</span><br><span class="line">├─ react@15.4.2</span><br><span class="line">│  ├─ fbjs@^0.8.4</span><br><span class="line">│  ├─ loose-envify@^1.1.0</span><br><span class="line">│  └─ object-assign@^4.1.0</span><br><span class="line">├─ jquery@3.2.1</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>react 还是之前的版本，但是 新安装的 react-dom 和 jquery 都变成了 最新版本再试试将版本号的写法变一下 去掉 ^<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&quot;dependencies&quot;: &#123;</span><br><span class="line">    &quot;react&quot;: &quot;15.4.2&quot;,</span><br><span class="line">    &quot;react-dom&quot;: &quot;15.4.2&quot;,</span><br><span class="line">    &quot;jquery&quot;: &quot;3.0.0&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>通过 sudo yarn install 安装 查看安装版本 yarn list<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">├─ react-dom@15.4.2</span><br><span class="line">│  ├─ fbjs@^0.8.1</span><br><span class="line">│  ├─ loose-envify@^1.1.0</span><br><span class="line">│  └─ object-assign@^4.1.0</span><br><span class="line">├─ react@15.4.2</span><br><span class="line">│  ├─ fbjs@^0.8.4</span><br><span class="line">│  ├─ loose-envify@^1.1.0</span><br><span class="line">│  └─ object-assign@^4.1.0</span><br><span class="line">├─ jquery@3.0.0</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<blockquote>
+<p>安装的是正确的版本了</p>
+</blockquote>
+<h1 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h1><blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&quot;react-dom&quot;: &quot;^15.4.2&quot;这种写法,加了^，是一般是通过npm install --save安装插件生成版本号的默认格式，表示安装15.x.x的最新版本，安装时不改变大版本号</span><br><span class="line">&quot;react-dom&quot;: &quot;15.4.2&quot;这种写法,只有版本号，是 yarn add安转后生成版本号的默认格式，表示必须安装同一个版本号</span><br><span class="line">版本号控制，有一个规范，就是语义化版本号控制，规定了版本号格式为：主版本号.次版本号.修订号</span><br></pre></td></tr></table></figure>
+</blockquote>
+<ul>
+<li>主版本号：当你做了不兼容的 API 修改</li>
+<li>次版本号：当你做了向下兼容的功能性新增</li>
+<li>修订号：当你做了向下兼容的问题修正</li>
+</ul>
+<blockquote>
+<p>一般来讲 只要主版本号正确，就可以兼容，但是像 最新版的 <a href="mailto:react@15.5.3" target="_blank" rel="noopener">react@15.5.3</a> ,出现了React.createClass与React.PropTypes弃用的警告，控制台一片红，因为引用了第三方组件库，最后选择暂不升级react，类似的情况，个人感觉 yarn 默认的版本号写法(只安装特定版本的文件)，更符合需求，npm 的话，很可能导致两个拥有同样package.json 的应用，安装了不同版本的包，进而导致一些BUG</p>
+</blockquote>
+<h1 id="3-在-yarn-或者-npm-中设置默认版本规则"><a href="#3-在-yarn-或者-npm-中设置默认版本规则" class="headerlink" title="3. 在 yarn 或者 npm 中设置默认版本规则"></a>3. 在 yarn 或者 npm 中设置默认版本规则</h1><blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm set save-exact true 全局设置 package.json 只记录确切版本号 node: 1.1.1,</span><br><span class="line">npm config set save-prefix &apos;~&apos; 设置安装新模块时，package.json 记录版本号的方式 ~ \ ^ 等</span><br><span class="line">sudo yarn config set save-prefix &apos;~&apos; 通过 yarn 设置，要有 sudo 权限</span><br></pre></td></tr></table></figure>
+</blockquote>
+<blockquote>
+<p>注意： 通过以上设置可以更改package.json 中记录的版本号默认方式，但是 yarn 的设置是带有 sudo 权限的，通过 sudo add <packagename> 的模块才会按照设置的方式更新版本号</packagename></p>
+</blockquote>
+<h1 id="12-总结"><a href="#12-总结" class="headerlink" title="12. 总结"></a>12. 总结</h1><blockquote>
+<p>就像官网上说的，yarn 的安装速度快，能并行化操作以最大化资源利用率；安全，Yarn会在每个安装包被执行前校验其完整性。正式版的 yarn 比较与 npm 更高效。</p>
+</blockquote>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2018-09-14T08:34:14.157Z" itemprop="dateUpdated">2018-09-14 16:34:14</time>
+</span><br>
+
+
+        
+        多谢大家观看<a href="/2018/09/14/yarn/" target="_blank" rel="external">https://qitiandear.github.io/2018/09/14/yarn/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://qitiandear.github.io">
+            <img src="/img/avatar.jpg" alt="田琪">
+            田琪
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qitiandear.github.io/2018/09/14/yarn/&title=《yarn》 — 田琪的博客&pic=https://qitiandear.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qitiandear.github.io/2018/09/14/yarn/&title=《yarn》 — 田琪的博客&source=学习前端的经历" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qitiandear.github.io/2018/09/14/yarn/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《yarn》 — 田琪的博客&url=https://qitiandear.github.io/2018/09/14/yarn/&via=https://qitiandear.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qitiandear.github.io/2018/09/14/yarn/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/09/14/前端注意事项/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">前端注意事项</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/09/14/vue的三种常用传值方式、父传子、子传父、非父子组件传值“/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">vue 的三种常用传值方式、父传子、子传父、非父子组件传值  </h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>田琪 &copy; 2015 - 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qitiandear.github.io/2018/09/14/yarn/&title=《yarn》 — 田琪的博客&pic=https://qitiandear.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qitiandear.github.io/2018/09/14/yarn/&title=《yarn》 — 田琪的博客&source=学习前端的经历" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qitiandear.github.io/2018/09/14/yarn/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《yarn》 — 田琪的博客&url=https://qitiandear.github.io/2018/09/14/yarn/&via=https://qitiandear.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qitiandear.github.io/2018/09/14/yarn/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://qitiandear.github.io/2018/09/14/yarn/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

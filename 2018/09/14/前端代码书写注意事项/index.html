@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>前端代码书写注意事项 | 田琪的博客 | 前端新人</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="前端代码书写注意事项1、结构化命名 VS 语义化命名       结构化命名：比较容易理解元素在代码中的位置，一旦网页结构发生变化，元素需要重新命名，而且样式也需要修改       语义化命名：让人清楚元素在网页中的角色，一旦网页结构变化，不需要重新命名，只需要修改css样式即可。2、语义化命名tips  Container：就是将你页面中的所有元素包在一起的部分，这部分你还可以命名为: ”wra">
+<meta name="keywords" content="前端">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端代码书写注意事项">
+<meta property="og:url" content="https://qitiandear.github.io/2018/09/14/前端代码书写注意事项/index.html">
+<meta property="og:site_name" content="田琪的博客">
+<meta property="og:description" content="前端代码书写注意事项1、结构化命名 VS 语义化命名       结构化命名：比较容易理解元素在代码中的位置，一旦网页结构发生变化，元素需要重新命名，而且样式也需要修改       语义化命名：让人清楚元素在网页中的角色，一旦网页结构变化，不需要重新命名，只需要修改css样式即可。2、语义化命名tips  Container：就是将你页面中的所有元素包在一起的部分，这部分你还可以命名为: ”wra">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-09-14T08:46:38.736Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前端代码书写注意事项">
+<meta name="twitter:description" content="前端代码书写注意事项1、结构化命名 VS 语义化命名       结构化命名：比较容易理解元素在代码中的位置，一旦网页结构发生变化，元素需要重新命名，而且样式也需要修改       语义化命名：让人清楚元素在网页中的角色，一旦网页结构变化，不需要重新命名，只需要修改css样式即可。2、语义化命名tips  Container：就是将你页面中的所有元素包在一起的部分，这部分你还可以命名为: ”wra">
+    
+        <link rel="alternate" type="application/atom+xml" title="田琪的博客" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">田琪</h5>
+          <a href="mailto:1307905648@qq.com" title="1307905648@qq.com" class="mail">1307905648@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/qitiandear" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://weibo.com/u/6395650305/home" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                测试
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">前端代码书写注意事项</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">前端代码书写注意事项</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-09-14T08:44:53.000Z" itemprop="datePublished" class="page-time">
+  2018-09-14
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#前端代码书写注意事项"><span class="post-toc-number">1.</span> <span class="post-toc-text">前端代码书写注意事项</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-前端代码书写注意事项"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">前端代码书写注意事项</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-09-14 16:44:53" datetime="2018-09-14T08:44:53.000Z"  itemprop="datePublished">2018-09-14</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="前端代码书写注意事项"><a href="#前端代码书写注意事项" class="headerlink" title="前端代码书写注意事项"></a>前端代码书写注意事项</h1><p>1、结构化命名 VS 语义化命名<br>       结构化命名：比较容易理解元素在代码中的位置，一旦网页结构发生变化，元素需要重新命名，而且样式也需要修改<br>       语义化命名：让人清楚元素在网页中的角色，一旦网页结构变化，不需要重新命名，只需要修改css样式即可。<br>2、语义化命名tips</p>
+<ul>
+<li>Container：就是将你页面中的所有元素包在一起的部分，这部分你还可以命名为: ”wrapper“, “wrap“, “page“.</li>
+<li>Header：是网站页面的头部区域，一般来讲，它包含网站的logo和一些其他元素。这部分你还可以命名为:”top“, “logo“, “page-header”</li>
+<li>Navbar：横向的导航栏，是最典型的网页元素。这部分你还可以命名为:“nav”, “navigation”, “nav-wrapper”.</li>
+<li>Menu：包含一般的链接和菜单，这部分你还可以命名为: ”sub-nav ”, “links“.</li>
+<li>Sidebar： 部分可以包含网站的次要内容，比如最近更新内容列表、关于网站的介绍或广告元素等…这部分你还可以命名为: ”sub-nav“, “side-panel“, “secondary-content“.</li>
+<li>Footer：包含网站的一些附加信息，这部分你还可以命名为: ”copyright“.</li>
+<li>topnav：顶部导航</li>
+</ul>
+<p>3、css属性的书写顺序<br>遵循布局定位属性–&gt;自身属性–&gt;文本属性–&gt;其他属性，尽量保证同类属性写在一起</p>
+<p>布局定位属性：display，list-style，position，top，right，bottom，left，float，clear，visibility，overflow；<br>自身属性：width，height，margin，padding，border，background；<br>文本属性：color，font，text-decoration，text-align，vertical-align，white-space；<br>其他属性：不常用的属性；</p>
+<p>4、必须为大区块样式添加注释，小区块适量注释<br>5、所有的图片最好加上alt属性<br>6、css样式多个属性可以分行写，提高代码的简洁性可读性<br>7、border：0 或者bord：0px，虽然页面上看不见，但浏览器进行了渲染，会消耗内存，这种情况下，直接border：none，浏览器不会进行渲染，也不会消耗内存。<br>   disp：none 不会做渲染，但是visiblity：hidden，则会做渲染，浪费浏览器内存。<br>8、使用外部样式表：易于维护修改，而且可以提高页面速度，因为css文件会在浏览器中产生缓存。内置在html文档中的css则会每次重新下载，。<br>9、代码压缩：当需要把项目部署到网络上时，可以使用YUI compressor来除去代码中的注释和空格，提高网页的加载速度。<br>10、命名为两个单词中，首字母大写<br>11、charset=“utf-8”是国际通用的编码格式，什么语言都可以正常访问，charset=“gb2312”只能用于中文，遇到别国的语言就会出现乱码的情况。<br>12、块级元素会占据一整行，而内联元素会并列显示在一行<br>13、浏览器一般会有默认的设置，所以需要重置样式，把浏览器默认的样式去掉。<br>14、css的命名方式有 驼峰式（sideshowWarp），用-连接（sideshow-Warp ），下划线连接（sideshow_Warp ）,书写规则统一，尽量不要混着来写。</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2018-09-14T08:46:38.736Z" itemprop="dateUpdated">2018-09-14 16:46:38</time>
+</span><br>
+
+
+        
+        多谢大家观看<a href="/2018/09/14/前端代码书写注意事项/" target="_blank" rel="external">https://qitiandear.github.io/2018/09/14/前端代码书写注意事项/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://qitiandear.github.io">
+            <img src="/img/avatar.jpg" alt="田琪">
+            田琪
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qitiandear.github.io/2018/09/14/前端代码书写注意事项/&title=《前端代码书写注意事项》 — 田琪的博客&pic=https://qitiandear.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qitiandear.github.io/2018/09/14/前端代码书写注意事项/&title=《前端代码书写注意事项》 — 田琪的博客&source=学习前端的经历" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qitiandear.github.io/2018/09/14/前端代码书写注意事项/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《前端代码书写注意事项》 — 田琪的博客&url=https://qitiandear.github.io/2018/09/14/前端代码书写注意事项/&via=https://qitiandear.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qitiandear.github.io/2018/09/14/前端代码书写注意事项/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/09/14/前端需要掌握的技术（不分先后）/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">前端需要掌握的技术（不分先后）</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/09/14/前端注意事项/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">前端注意事项</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>田琪 &copy; 2015 - 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qitiandear.github.io/2018/09/14/前端代码书写注意事项/&title=《前端代码书写注意事项》 — 田琪的博客&pic=https://qitiandear.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qitiandear.github.io/2018/09/14/前端代码书写注意事项/&title=《前端代码书写注意事项》 — 田琪的博客&source=学习前端的经历" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qitiandear.github.io/2018/09/14/前端代码书写注意事项/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《前端代码书写注意事项》 — 田琪的博客&url=https://qitiandear.github.io/2018/09/14/前端代码书写注意事项/&via=https://qitiandear.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qitiandear.github.io/2018/09/14/前端代码书写注意事项/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://qitiandear.github.io/2018/09/14/前端代码书写注意事项/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>前端注意事项 | 田琪的博客 | 前端新人</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="">
+    <meta name="description" content="前端工作注意事项(pc端)1.H5文档link，script不需要加type属性2.低版本浏览器兼容问题：（1）PC端 H5新标签尽量不用，不如header,footer,nav,采用加类名；（2）CSS选择器 nth-of-type不使用，改为加类名；3.标签语义化，P标签，span,strong，H标签要使用合理；4.html模块化；6.内容超出，以省略号显示；7.a链接嵌套要合适，避免行元素">
+<meta name="keywords" content="前端">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端注意事项">
+<meta property="og:url" content="https://qitiandear.github.io/2018/09/14/前端注意事项/index.html">
+<meta property="og:site_name" content="田琪的博客">
+<meta property="og:description" content="前端工作注意事项(pc端)1.H5文档link，script不需要加type属性2.低版本浏览器兼容问题：（1）PC端 H5新标签尽量不用，不如header,footer,nav,采用加类名；（2）CSS选择器 nth-of-type不使用，改为加类名；3.标签语义化，P标签，span,strong，H标签要使用合理；4.html模块化；6.内容超出，以省略号显示；7.a链接嵌套要合适，避免行元素">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-09-14T08:42:30.537Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前端注意事项">
+<meta name="twitter:description" content="前端工作注意事项(pc端)1.H5文档link，script不需要加type属性2.低版本浏览器兼容问题：（1）PC端 H5新标签尽量不用，不如header,footer,nav,采用加类名；（2）CSS选择器 nth-of-type不使用，改为加类名；3.标签语义化，P标签，span,strong，H标签要使用合理；4.html模块化；6.内容超出，以省略号显示；7.a链接嵌套要合适，避免行元素">
+    
+        <link rel="alternate" type="application/atom+xml" title="田琪的博客" href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+</head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">田琪</h5>
+          <a href="mailto:1307905648@qq.com" title="1307905648@qq.com" class="mail">1307905648@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                Archives
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                Tags
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/categories"  >
+                <i class="icon icon-lg icon-th-list"></i>
+                Categories
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/qitiandear" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://weibo.com/u/6395650305/home" target="_blank" >
+                <i class="icon icon-lg icon-weibo"></i>
+                Weibo
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/custom"  >
+                <i class="icon icon-lg icon-link"></i>
+                测试
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">前端注意事项</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">前端注意事项</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2018-09-14T08:38:14.000Z" itemprop="datePublished" class="page-time">
+  2018-09-14
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+    <aside class="post-widget">
+        <nav class="post-toc-wrap post-toc-shrink" id="post-toc">
+            <h4>TOC</h4>
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#前端工作注意事项-pc端"><span class="post-toc-number">1.</span> <span class="post-toc-text">前端工作注意事项(pc端)</span></a></li></ol>
+        </nav>
+    </aside>
+
+
+<article id="post-前端注意事项"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">前端注意事项</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2018-09-14 16:38:14" datetime="2018-09-14T08:38:14.000Z"  itemprop="datePublished">2018-09-14</time>
+
+            
+
+
+            
+<span id="busuanzi_container_page_pv" title="文章总阅读量" style='display:none'>
+    <i class="icon icon-eye icon-pr"></i><span id="busuanzi_value_page_pv"></span>
+</span>
+
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            <h1 id="前端工作注意事项-pc端"><a href="#前端工作注意事项-pc端" class="headerlink" title="前端工作注意事项(pc端)"></a>前端工作注意事项(pc端)</h1><p>1.H5文档link，script不需要加type属性<br>2.低版本浏览器兼容问题：<br>（1）PC端 H5新标签尽量不用，不如header,footer,nav,采用加类名；<br>（2）CSS选择器 nth-of-type不使用，改为加类名；<br>3.标签语义化，P标签，span,strong，H标签要使用合理；<br>4.html模块化；<br>6.内容超出，以省略号显示；<br>7.a链接嵌套要合适，避免行元素包含块元素；<br>8.浮动之后要清浮动；<br>9.子元素共有的属性，可以直接设置父级就行；<br>10.分为内外屏，采取加CLASS名，.ww .w 内屏有最大宽度；<br>11.可以通过同时写上并列的两个class名，精准控制CSS样式；<br>12.使用<label>标签包裹radio或checkbox和他们的文字，不用再使用for属性；<br>13.有效使用<thead>、<tfoot>、<tbody>、<th>（scope属性）。可以把<tfoot>放<tbody>前提高加载速度。<br>14.特殊符号尽可能使用代码替代。常用特殊符号如下。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">¥：&amp;yen; 人民币符号元</span><br><span class="line">©：&amp;copy; 版权</span><br><span class="line">®： &amp;reg; 注册商标</span><br><span class="line">™： &amp;trade; 商标TM</span><br><span class="line">·： &amp;middot; 间隔符号</span><br><span class="line">“： &amp;quot; 双引号</span><br><span class="line">&amp;： &amp;amp; &amp;符</span><br><span class="line">&lt;： &amp;lt; 小于号</span><br><span class="line">&gt;： &amp;gt; 大于号</span><br><span class="line">： &amp;nbsp; 半角空格</span><br><span class="line">×：&amp;times; 乘号</span><br><span class="line">÷： &amp;divide; 除号</span><br></pre></td></tr></table></figure></tbody></tfoot></th></tbody></tfoot></thead></label></p>
+<p>15.为选择器中的属性添加单引号。eg：input[type=’text’]。<br>16.为引用的图片、文件等添加单引号。eg：background:url(‘../images/logo.png’);<br>17.css hack<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">IE6：_</span><br><span class="line">IE6/7： *</span><br><span class="line">IE7/Firefox：!important</span><br><span class="line">IE7：*+</span><br><span class="line">IE6/7/8：\9</span><br><span class="line">IE8：\0</span><br></pre></td></tr></table></figure></p>
+<p>18.尽量将图片大小控制在200K以内，可以使用一些在线的图片压缩工具。如：图好快；<br>19.标题 用图片的 将文字写在alt属性里面；<br>20.链接要有明显的样式；<br>21.按钮添加交互效果；<br>22.图片太大，设置图片的最大值max-width,防止超出变形;<br>23.JS统一写在 $(document).ready(function(){ }); 里面<br>24.设置的行高 要大于字体大小；<br>25.所有的图片 加上 alt属性；<br>26.js代码 后面都需要加上 “；”号；<br>27.背景图过大，可以选择切一部分然后平铺；<br><br>28.h*标签下面 如果用图片的话 alt属性要写；<br>29.定位z-index数值不能超过最外层的弹窗；<br>30.用绝对定位的时候，top,left值必须写；<br>31.用a标签包裹块元素时，给a加上属性 display:block；</p>
+
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <div class="content">
+        
+<span class="post-time">
+    最后更新时间：<time datetime="2018-09-14T08:42:30.537Z" itemprop="dateUpdated">2018-09-14 16:42:30</time>
+</span><br>
+
+
+        
+        多谢大家观看<a href="/2018/09/14/前端注意事项/" target="_blank" rel="external">https://qitiandear.github.io/2018/09/14/前端注意事项/</a>
+        
+    </div>
+    
+    <footer>
+        <a href="https://qitiandear.github.io">
+            <img src="/img/avatar.jpg" alt="田琪">
+            田琪
+        </a>
+    </footer>
+</blockquote>
+
+        
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;" class="page-reward-btn waves-effect waves-circle waves-light">赏</a>
+</div>
+
+
+
+        <div class="post-footer">
+            
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qitiandear.github.io/2018/09/14/前端注意事项/&title=《前端注意事项》 — 田琪的博客&pic=https://qitiandear.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qitiandear.github.io/2018/09/14/前端注意事项/&title=《前端注意事项》 — 田琪的博客&source=学习前端的经历" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qitiandear.github.io/2018/09/14/前端注意事项/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《前端注意事项》 — 田琪的博客&url=https://qitiandear.github.io/2018/09/14/前端注意事项/&via=https://qitiandear.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qitiandear.github.io/2018/09/14/前端注意事项/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2018/09/14/前端代码书写注意事项/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">前端代码书写注意事项</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2018/09/14/yarn/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">yarn</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+<div id="reward" class="page-modal reward-lay">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <h3 class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        谢谢大爷~
+        <i class="icon icon-quote-right"></i>
+    </h3>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/img/wechat.jpg" alt="打赏二维码">
+        </div>
+        
+        <label class="reward-toggle">
+            <input id="rewardToggle" type="checkbox" class="reward-toggle-check"
+                data-wechat="/img/wechat.jpg" data-alipay="/img/alipay.jpg">
+            <div class="reward-toggle-ctrol">
+                <span class="reward-toggle-item wechat">微信</span>
+                <span class="reward-toggle-label"></span>
+                <span class="reward-toggle-item alipay">支付宝</span>
+            </div>
+        </label>
+        
+    </div>
+</div>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+<p>
+    <span id="busuanzi_container_site_uv" style='display:none'>
+        站点总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style='display:none'>
+        站点总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>田琪 &copy; 2015 - 2018</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/yscoder/hexo-theme-indigo" target="_blank">indigo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=https://qitiandear.github.io/2018/09/14/前端注意事项/&title=《前端注意事项》 — 田琪的博客&pic=https://qitiandear.github.io/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=https://qitiandear.github.io/2018/09/14/前端注意事项/&title=《前端注意事项》 — 田琪的博客&source=学习前端的经历" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https://qitiandear.github.io/2018/09/14/前端注意事项/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《前端注意事项》 — 田琪的博客&url=https://qitiandear.github.io/2018/09/14/前端注意事项/&via=https://qitiandear.github.io" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=https://qitiandear.github.io/2018/09/14/前端注意事项/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=https://qitiandear.github.io/2018/09/14/前端注意事项/" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: true };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+<script>
+(function() {
+    var OriginTitile = document.title, titleTime;
+    document.addEventListener('visibilitychange', function() {
+        if (document.hidden) {
+            document.title = '死鬼去哪里了！';
+            clearTimeout(titleTime);
+        } else {
+            document.title = '(つェ⊂)咦!又好了!';
+            titleTime = setTimeout(function() {
+                document.title = OriginTitile;
+            },2000);
+        }
+    });
+})();
+</script>
+
+
+
+</body>
+</html>
