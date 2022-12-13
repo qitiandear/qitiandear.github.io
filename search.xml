@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>rust环境搭建</title>
+      <link href="/2022/12/13/rust-huan-jing-da-jian/"/>
+      <url>/2022/12/13/rust-huan-jing-da-jian/</url>
+      
+        <content type="html"><![CDATA[<p>Rust 语言是一种高效、可靠的通用高级语言。其高效不仅限于开发效率，它的执行效率也是令人称赞的，是一种少有的兼顾开发效率和执行效率的语言。</p><h2 id="Rust-环境搭建"><a href="#Rust-环境搭建" class="headerlink" title="Rust 环境搭建"></a>Rust 环境搭建</h2><p>本次搭建使用的是win10的wsl安装的openEuler系统</p><h3 id="首先"><a href="#首先" class="headerlink" title="首先"></a>首先</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">export</span> <span class="token assign-left variable">RUSTUP_DIST_SERVER</span><span class="token operator">=</span>https://mirrors.ustc.edu.cn/rust-static<span class="token builtin class-name">export</span> <span class="token assign-left variable">RUSTUP_UPDATE_ROOT</span><span class="token operator">=</span>https://mirrors.ustc.edu.cn/rust-static/rustup<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h3 id="下载安装rust"><a href="#下载安装rust" class="headerlink" title="下载安装rust"></a>下载安装rust</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">curl</span> <span class="token parameter variable">--proto</span> <span class="token string">'=https'</span> <span class="token parameter variable">--tlsv1.2</span> <span class="token parameter variable">-sSf</span> https://sh.rustup.rs <span class="token operator">|</span> <span class="token function">sh</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h3 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">source</span> <span class="token string">"<span class="token environment constant">$HOME</span>/.cargo/env"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><h3 id="检测环境是否配置成功"><a href="#检测环境是否配置成功" class="headerlink" title="检测环境是否配置成功"></a>检测环境是否配置成功</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">cargo</span> <span class="token parameter variable">-V</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><img src="https://kun.nwyp123.com/20221213131919.png"></p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">rustc <span class="token parameter variable">-V</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><img src="https://kun.nwyp123.com/20221213131948.png"></p><h3 id="国内配置rust的下载镜像（可选）"><a href="#国内配置rust的下载镜像（可选）" class="headerlink" title="国内配置rust的下载镜像（可选）"></a>国内配置rust的下载镜像（可选）</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> .cargo<span class="token function">ls</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><p><img src="https://kun.nwyp123.com/20221213132308.png"></p><p>查看是否存在config文件，如果没有创建config文件，然后编辑输入一下内容：</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>source.crates-io<span class="token punctuation">]</span>registry <span class="token operator">=</span> <span class="token string">"https://github.com/rust-lang/crates.io-index"</span>replace-with <span class="token operator">=</span> <span class="token string">'ustc'</span><span class="token punctuation">[</span>source.ustc<span class="token punctuation">]</span>registry <span class="token operator">=</span> <span class="token string">"git://mirrors.ustc.edu.cn/crates.io-index"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>至此rust的环境就配置完成了</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 环境 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> rust </tag>
+            
+            <tag> install </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2022/12/13/hello-world/"/>
       <url>/2022/12/13/hello-world/</url>
