@@ -4,10 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="rust环境搭建, 前端">
-    <meta name="description" content="Rust 语言是一种高效、可靠的通用高级语言。其高效不仅限于开发效率，它的执行效率也是令人称赞的，是一种少有的兼顾开发效率和执行效率的语言。
-Rust 环境搭建本次搭建使用的是win10的wsl安装的openEuler系统
-首先export">
+    <meta name="keywords" content="Vue2性能优化, 前端">
+    <meta name="description" content="性能优化分为四个模块：代码层面的优化，打包层面的优化，服务层面的优化，图片资源的优化。个数分别为8，3，5，5（记住个数后不容易漏忘）
+一、代码层面的优化共8个，记住开头字，这样方便记忆：路函缓脚监，循活容
+1. 路由懒加载const Ho">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -19,7 +19,7 @@ Rust 环境搭建本次搭建使用的是win10的wsl安装的openEuler系统
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>rust环境搭建 | 田琪的博客</title>
+    <title>Vue2性能优化 | 田琪的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -276,12 +276,12 @@ Rust 环境搭建本次搭建使用的是win10的wsl安装的openEuler系统
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">rust环境搭建</h1>
+                    <h1 class="description center-align post-title">Vue2性能优化</h1>
                 </div>
             </div>
         </div>
@@ -305,12 +305,8 @@ Rust 环境搭建本次搭建使用的是win10的wsl安装的openEuler系统
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/rust/">
-                                <span class="chip bg-color">rust</span>
-                            </a>
-                        
-                            <a href="/tags/install/">
-                                <span class="chip bg-color">install</span>
+                            <a href="/tags/vue/">
+                                <span class="chip bg-color">vue</span>
                             </a>
                         
                     </div>
@@ -321,8 +317,8 @@ Rust 环境搭建本次搭建使用的是win10的wsl安装的openEuler系统
                     <div class="post-cate">
                         <i class="fas fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/%E7%8E%AF%E5%A2%83/" class="post-category">
-                                环境
+                            <a href="/categories/%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/" class="post-category">
+                                性能优化
                             </a>
                         
                     </div>
@@ -358,34 +354,59 @@ Rust 环境搭建本次搭建使用的是win10的wsl安装的openEuler系统
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Rust 语言是一种高效、可靠的通用高级语言。其高效不仅限于开发效率，它的执行效率也是令人称赞的，是一种少有的兼顾开发效率和执行效率的语言。</p>
-<h2 id="Rust-环境搭建"><a href="#Rust-环境搭建" class="headerlink" title="Rust 环境搭建"></a>Rust 环境搭建</h2><p>本次搭建使用的是win10的wsl安装的openEuler系统</p>
-<h3 id="首先"><a href="#首先" class="headerlink" title="首先"></a>首先</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">export</span> <span class="token assign-left variable">RUSTUP_DIST_SERVER</span><span class="token operator">=</span>https://mirrors.ustc.edu.cn/rust-static
-<span class="token builtin class-name">export</span> <span class="token assign-left variable">RUSTUP_UPDATE_ROOT</span><span class="token operator">=</span>https://mirrors.ustc.edu.cn/rust-static/rustup<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+                <p>性能优化分为四个模块：代码层面的优化，打包层面的优化，服务层面的优化，图片资源的优化。个数分别为8，3，5，5（记住个数后不容易漏忘）</p>
+<h2 id="一、代码层面的优化"><a href="#一、代码层面的优化" class="headerlink" title="一、代码层面的优化"></a>一、代码层面的优化</h2><p>共8个，记住开头字，这样方便记忆：路函缓脚监，循活容</p>
+<h3 id="1-路由懒加载"><a href="#1-路由懒加载" class="headerlink" title="1. 路由懒加载"></a>1. 路由懒加载</h3><pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token keyword">const</span> <span class="token function-variable function">Home</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword">import</span><span class="token punctuation">(</span><span class="token comment">/* webpackChunkName: "Home" */</span><span class="token string">'../components/layout/home.vue'</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<h3 id="下载安装rust"><a href="#下载安装rust" class="headerlink" title="下载安装rust"></a>下载安装rust</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">curl</span> <span class="token parameter variable">--proto</span> <span class="token string">'=https'</span> <span class="token parameter variable">--tlsv1.2</span> <span class="token parameter variable">-sSf</span> https://sh.rustup.rs <span class="token operator">|</span> <span class="token function">sh</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="2-函数式组件"><a href="#2-函数式组件" class="headerlink" title="2. 函数式组件"></a>2. 函数式组件</h3><p>函数型组件也被称为无状态组件，无生命周期（意味着钩子函数不能使用），无状态响应（methods中的方法不能响应）。</p>
+<p>在template模板中增加functional即可</p>
+<pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>template</span> <span class="token attr-name">functional</span><span class="token punctuation">&gt;</span></span>    &lt;el-table      :data="props.items"  //2.3.0之前的Vue版本需要通过props接收传的值，之后的版本可省略      height="400"      border      @selection-change="props.handleSelectChange"    &gt;      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>slot</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>slot</span><span class="token punctuation">&gt;</span></span>    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>el-table</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>template</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span><span class="token punctuation">&gt;</span></span><span class="token script"><span class="token language-javascript"><span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{</span>    <span class="token literal-property property">props</span><span class="token operator">:</span><span class="token punctuation">[</span><span class="token string">"items"</span><span class="token punctuation">,</span><span class="token string">"handleSelectChange"</span><span class="token punctuation">]</span><span class="token punctuation">}</span></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<h3 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">source</span> <span class="token string">"<span class="token environment constant">$HOME</span>/.cargo/env"</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>优点：无生命周期，渲染快。</p>
+<h3 id="3-缓存不活动的组件实例（-keep-alive）"><a href="#3-缓存不活动的组件实例（-keep-alive）" class="headerlink" title="3. 缓存不活动的组件实例（ keep-alive）"></a>3. 缓存不活动的组件实例（ keep-alive）</h3><h3 id="4-脚本延迟加载"><a href="#4-脚本延迟加载" class="headerlink" title="4. 脚本延迟加载"></a>4. 脚本延迟加载</h3><pre class="line-numbers language-markup" data-language="markup"><code class="language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">defer</span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token punctuation">"</span></span> <span class="token attr-name">async</span><span class="token punctuation">&gt;</span></span><span class="token script"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
-<h3 id="检测环境是否配置成功"><a href="#检测环境是否配置成功" class="headerlink" title="检测环境是否配置成功"></a>检测环境是否配置成功</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">cargo</span> <span class="token parameter variable">-V</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>HTML4的defer是“渲染完再执行”，HTML5的async是“下载完就执行”。多个defer脚本，会按照它们在页面出现的顺序加载，而多个async脚本不能保证加载顺序（如果脚本之间有继承关系，则不能使用async，比如vue与vuex）</p>
+<h3 id="5-监听事件销毁"><a href="#5-监听事件销毁" class="headerlink" title="5. 监听事件销毁"></a>5. 监听事件销毁</h3><p>Vue组件销毁时（切换路由时），会自动清理它与其他实例的连接，解绑它的全部指令及事件监听。如果使用原生的方式，比如addEventListener，事件总线等方式是不会自动销毁的，我们需要在组件销毁时（beforeDestroy或destroyed生命周期）手动移除这些事件的监听，以免造成内存泄漏。</p>
+<h3 id="6-循环添加key"><a href="#6-循环添加key" class="headerlink" title="6. 循环添加key"></a>6. 循环添加key</h3><p>给每个vnode增加一个唯一id，高效的更新VNode。</p>
+<h3 id="7-活用v-show，减少v-if"><a href="#7-活用v-show，减少v-if" class="headerlink" title="7. 活用v-show，减少v-if"></a>7. 活用v-show，减少v-if</h3><p>v-if会改变DOM数，v-show通过display:none的方式来控制显示内容，不会改变DOM数</p>
+<h3 id="8-容易触发重排的元素与“静态”元素分层（使用z-index）"><a href="#8-容易触发重排的元素与“静态”元素分层（使用z-index）" class="headerlink" title="8. 容易触发重排的元素与“静态”元素分层（使用z-index）"></a>8. 容易触发重排的元素与“静态”元素分层（使用z-index）</h3><p>一个页面是由许多层级组成。在一个页面构建完渲染树后，是经历以下流程才最终呈现在我们面前：</p>
+<p>（1）浏览器会先获取DOM树并依据样式将其分割成多个独立的渲染层</p>
+<p>（2）CPU将每个层绘制进绘图中</p>
+<p>（3）将位图作为纹理上传至GPU（显卡）绘制</p>
+<p>（4）GPU将所有的渲染层缓存（如果下次上传的渲染层没有发生变化，GPU就不需要对其进行重绘）并符合多个渲染层最终形成我们的图像</p>
+<p>由上可知：CPU负责布局，GPU负责绘制。</p>
+<p>进行分层让GPU分担更多的渲染工作，我们通常把这样的措施称为硬件加速</p>
+<h2 id="二、打包层面的优化"><a href="#二、打包层面的优化" class="headerlink" title="二、打包层面的优化"></a>二、打包层面的优化</h2><h3 id="1-按需引入，减少打包体积"><a href="#1-按需引入，减少打包体积" class="headerlink" title="1.按需引入，减少打包体积"></a>1.按需引入，减少打包体积</h3><h3 id="2-不生成-map文件"><a href="#2-不生成-map文件" class="headerlink" title="2.不生成.map文件"></a>2.不生成.map文件</h3><p>vue.config.js配置</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token literal-property property">productionSourceMap</span><span class="token operator">:</span> process<span class="token punctuation">.</span>env<span class="token punctuation">.</span><span class="token constant">NODE_ENV</span> <span class="token operator">===</span> <span class="token string">'production'</span> <span class="token operator">?</span> <span class="token boolean">false</span> <span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://kun.nwyp123.com/20221213131919.png"></p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">rustc <span class="token parameter variable">-V</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h3 id="3-打包移除console-log"><a href="#3-打包移除console-log" class="headerlink" title="3.打包移除console.log"></a>3.打包移除console.log</h3><p>原因：毕竟是一次函数调用，并且被console.log调用的函数，不会被垃圾回收机制回收，可能会导致内存泄漏。</p>
+<p>使用babel-plugin-transform-remove-console</p>
+<h2 id="三、服务层面的优化"><a href="#三、服务层面的优化" class="headerlink" title="三、服务层面的优化"></a>三、服务层面的优化</h2><h3 id="1-减少HTTP请求数"><a href="#1-减少HTTP请求数" class="headerlink" title="1.减少HTTP请求数"></a>1.减少HTTP请求数</h3><p>例如：使用雪碧图</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token property">background</span><span class="token punctuation">:</span> <span class="token url"><span class="token function">url</span><span class="token punctuation">(</span><span class="token string url">'./images/css_sprites.png'</span><span class="token punctuation">)</span></span> -116px -10px<span class="token punctuation">;</span> //通过调整position来展示图片<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://kun.nwyp123.com/20221213131948.png"></p>
-<h3 id="国内配置rust的下载镜像（可选）"><a href="#国内配置rust的下载镜像（可选）" class="headerlink" title="国内配置rust的下载镜像（可选）"></a>国内配置rust的下载镜像（可选）</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token builtin class-name">cd</span> .cargo
-<span class="token function">ls</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p>雪碧图自动生成网站：<a target="_blank" rel="noopener" href="https://www.toptal.com/developers/css/sprite-generator">https://www.toptal.com/developers/css/sprite-generator</a></p>
+<h3 id="2-开启gzip传输压缩"><a href="#2-开启gzip传输压缩" class="headerlink" title="2.开启gzip传输压缩"></a>2.开启gzip传输压缩</h3><h3 id="3-DNS预解析"><a href="#3-DNS预解析" class="headerlink" title="3.DNS预解析"></a>3.DNS预解析</h3><p>X-DNS-Prefetch-Control头控制着浏览器的DNS预读取功能。DNS预读取是一项使浏览器主动去执行域名解析的功能，其范围包括文档的所有链接，无论是图片的，CSS的，还是JavaScript等其他用户能够点击的URL</p>
+<h3 id="4-使用CDN加速"><a href="#4-使用CDN加速" class="headerlink" title="4.使用CDN加速"></a>4.使用CDN加速</h3><p>使用BootCDN免费的加速服务，网址：<a target="_blank" rel="noopener" href="https://www.bootcdn.cn/">www.bootcdn.cn/</a></p>
+<p>实例：引入echarts</p>
+<p>在index.html中使用cdn引入</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string">"https://cdn.bootcss.com/echarts/3.7.2/echarts.min.js"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://kun.nwyp123.com/20221213132308.png"></p>
-<p>查看是否存在config文件，如果没有创建config文件，然后编辑输入一下内容：</p>
-<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token punctuation">[</span>source.crates-io<span class="token punctuation">]</span>
-registry <span class="token operator">=</span> <span class="token string">"https://github.com/rust-lang/crates.io-index"</span>
-replace-with <span class="token operator">=</span> <span class="token string">'ustc'</span>
-<span class="token punctuation">[</span>source.ustc<span class="token punctuation">]</span>
-registry <span class="token operator">=</span> <span class="token string">"git://mirrors.ustc.edu.cn/crates.io-index"</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>在vue.config.js配置</p>
+<pre class="line-numbers language-javascript" data-language="javascript"><code class="language-javascript"><span class="token literal-property property">configureWebpack</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">//externals中的key是用于import，value表示在全局中访问到该对象，</span>
+    <span class="token comment">//就是window.echarts，window可省略，直接通过echart访问，echart.init()</span>
+    <span class="token literal-property property">externals</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token string-property property">'echarts'</span><span class="token operator">:</span> <span class="token string">'echarts'</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<p>至此rust的环境就配置完成了</p>
-
+<h3 id="5-使用SSR渲染"><a href="#5-使用SSR渲染" class="headerlink" title="5. 使用SSR渲染"></a>5. 使用SSR渲染</h3><h2 id="四、图片资源优化"><a href="#四、图片资源优化" class="headerlink" title="四、图片资源优化"></a>四、图片资源优化</h2><h3 id="1-压缩图片"><a href="#1-压缩图片" class="headerlink" title="1. 压缩图片"></a>1. 压缩图片</h3><p>在线压缩图片网站：<a target="_blank" rel="noopener" href="https://tinypng.com/">tinypng.com</a></p>
+<h3 id="2-不在HTML里缩放图片"><a href="#2-不在HTML里缩放图片" class="headerlink" title="2. 不在HTML里缩放图片"></a>2. 不在HTML里缩放图片</h3><p>定义的图片多大，就拿多大的图片，不要在<code>200*200</code>的区域，放<code>400*400</code>的图片</p>
+<h3 id="3-img标签增加alt属性"><a href="#3-img标签增加alt属性" class="headerlink" title="3. img标签增加alt属性"></a>3. img标签增加alt属性</h3><p>在图片加载失败时，同alt属性显示文字，加快页面的反应速度</p>
+<h3 id="4-图片懒加载"><a href="#4-图片懒加载" class="headerlink" title="4. 图片懒加载"></a>4. 图片懒加载</h3><p>方法一：使用element-UI的图片懒加载</p>
+<p>方法二：当元素滚动到可视区域处，再给图片的src属性赋值，去加载图片</p>
+<h3 id="5-使用字体图标代替图片"><a href="#5-使用字体图标代替图片" class="headerlink" title="5. 使用字体图标代替图片"></a>5. 使用字体图标代替图片</h3>
                 
             </div>
             <hr/>
@@ -411,7 +432,7 @@ registry <span class="token operator">=</span> <span class="token string">"git:/
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://qitiandear.github.io/2022/12/13/rust-huan-jing-da-jian/">https://qitiandear.github.io/2022/12/13/rust-huan-jing-da-jian/</a>
+                    <a href="https://qitiandear.github.io/2022/12/13/vue2-xing-neng-you-hua/">https://qitiandear.github.io/2022/12/13/vue2-xing-neng-you-hua/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -449,12 +470,8 @@ registry <span class="token operator">=</span> <span class="token string">"git:/
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/rust/">
-                                    <span class="chip bg-color">rust</span>
-                                </a>
-                            
-                                <a href="/tags/install/">
-                                    <span class="chip bg-color">install</span>
+                                <a href="/tags/vue/">
+                                    <span class="chip bg-color">vue</span>
                                 </a>
                             
                         </div>
@@ -533,9 +550,10 @@ registry <span class="token operator">=</span> <span class="token string">"git:/
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2022/12/13/vue2-xing-neng-you-hua/">
                     <div class="card-image">
@@ -553,9 +571,9 @@ registry <span class="token operator">=</span> <span class="token string">"git:/
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-12-13
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-12-13
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -568,6 +586,7 @@ registry <span class="token operator">=</span> <span class="token string">"git:/
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -586,13 +605,13 @@ registry <span class="token operator">=</span> <span class="token string">"git:/
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/12/13/hello-world/">
+                <a href="/2022/12/13/rust-huan-jing-da-jian/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="rust环境搭建">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">rust环境搭建</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -609,8 +628,8 @@ registry <span class="token operator">=</span> <span class="token string">"git:/
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/%E6%AC%A2%E8%BF%8E/" class="post-category">
-                                    欢迎
+                            <a href="/categories/%E7%8E%AF%E5%A2%83/" class="post-category">
+                                    环境
                                 </a>
                             
                             
@@ -620,8 +639,12 @@ registry <span class="token operator">=</span> <span class="token string">"git:/
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/Hello/">
-                        <span class="chip bg-color">Hello</span>
+                    <a href="/tags/rust/">
+                        <span class="chip bg-color">rust</span>
+                    </a>
+                    
+                    <a href="/tags/install/">
+                        <span class="chip bg-color">install</span>
                     </a>
                     
                 </div>
