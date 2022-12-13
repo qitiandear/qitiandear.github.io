@@ -6,7 +6,7 @@
   <link href="https://qitiandear.github.io/atom.xml" rel="self"/>
   
   <link href="https://qitiandear.github.io/"/>
-  <updated>2022-12-13T02:49:23.405Z</updated>
+  <updated>2022-12-13T03:48:01.440Z</updated>
   <id>https://qitiandear.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://qitiandear.github.io/2022/12/13/hello-world/"/>
     <id>https://qitiandear.github.io/2022/12/13/hello-world/</id>
     <published>2022-12-13T01:34:56.359Z</published>
-    <updated>2022-12-13T02:49:23.405Z</updated>
+    <updated>2022-12-13T03:48:01.440Z</updated>
     
     
       
@@ -33,6 +33,8 @@
       
     
     
+    
+    <category term="欢迎" scheme="https://qitiandear.github.io/categories/%E6%AC%A2%E8%BF%8E/"/>
     
     
     <category term="Hello" scheme="https://qitiandear.github.io/tags/Hello/"/>
