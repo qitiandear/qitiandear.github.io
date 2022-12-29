@@ -6,7 +6,7 @@
   <link href="https://qitiandear.github.io/atom.xml" rel="self"/>
   
   <link href="https://qitiandear.github.io/"/>
-  <updated>2022-12-15T09:00:06.671Z</updated>
+  <updated>2022-12-29T06:51:17.935Z</updated>
   <id>https://qitiandear.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Cargo介绍</title>
+    <link href="https://qitiandear.github.io/2022/12/29/cargo-jie-shao/"/>
+    <id>https://qitiandear.github.io/2022/12/29/cargo-jie-shao/</id>
+    <published>2022-12-29T06:33:06.000Z</published>
+    <updated>2022-12-29T06:51:17.935Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;cargo是一个构建系统和包管理工具,用来管理rust工程和处理许多任务（构建代码、下载包）,cargo在安装rust的环境时，会自动安装，所以这里的话，直接调用&lt;/p&gt;
+&lt;pre class=&quot;line-numbers language-bash&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="介绍" scheme="https://qitiandear.github.io/categories/%E4%BB%8B%E7%BB%8D/"/>
+    
+    
+    <category term="rust" scheme="https://qitiandear.github.io/tags/rust/"/>
+    
+    <category term="cargo" scheme="https://qitiandear.github.io/tags/cargo/"/>
+    
+  </entry>
   
   <entry>
     <title>rust数据结构</title>

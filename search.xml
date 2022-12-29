@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Cargo介绍</title>
+      <link href="/2022/12/29/cargo-jie-shao/"/>
+      <url>/2022/12/29/cargo-jie-shao/</url>
+      
+        <content type="html"><![CDATA[<p>cargo是一个构建系统和包管理工具,用来管理rust工程和处理许多任务（构建代码、下载包）,cargo在安装rust的环境时，会自动安装，所以这里的话，直接调用</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token comment"># 可以直接看到对应的cargo版本</span><span class="token function">cargo</span> <span class="token parameter variable">--version</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre><h2 id="cargo工程的创建"><a href="#cargo工程的创建" class="headerlink" title="cargo工程的创建"></a>cargo工程的创建</h2><ol><li>创建</li></ol><p>使用<code>cargo new [projectName]</code>来创建一个新的工程</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">cargo</span> new blog_cargo<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p><img src="https://kun.nwyp123.com/20221229144156.png"></p><ol start="2"><li>目录解析</li></ol><p>创建的目录包括：</p><ul><li>cargo.toml：用于定义包和信息<code>[package]</code>和依赖<code>[dependencies]</code></li><li>源文件目前是放在src的目录下的</li></ul><ol start="3"><li>toml文件中需要注意的点</li></ol><p>[package]下面的一些配置:</p><ul><li>build：用于指定build来指定这个包用源码的方式编译</li></ul><blockquote><p>比如在rust中引用了比如C的库，这些东西编译就放在一个build.rs中，会通过源码的方式进行编译</p></blockquote><ul><li>include和exclude：用来指定那些包需要被打包或发布，可以通过<code>carge package --list</code>来查看</li><li>publish: 用来指定包是否发布到包仓库，<code>保护包的私有性</code></li></ul><h2 id="使用cargo构建和跑rust工程"><a href="#使用cargo构建和跑rust工程" class="headerlink" title="使用cargo构建和跑rust工程"></a>使用cargo构建和跑rust工程</h2><ol><li>构建rust工程</li></ol><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">cargo</span> build<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><ol start="2"><li>运行cargo工程</li></ol><p>构建成功之后的文件都在<code>target/debug/hello_cargo</code>下，直接运行目录下的<code>exe</code>文件也可以运行</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">.<span class="token punctuation">\</span>target<span class="token punctuation">\</span>debug<span class="token punctuation">\</span>hello_cargo.exe<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>也可以通过cargo来运行对应的exe打包文件</p><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"><span class="token function">cargo</span> run<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre><p>在执行cargo run的时候有两个比较有意思的点：</p><ul><li>源文件没有变化，直接执行cargo build出来的文件</li><li>如果源文件产生了变化，会先编译，然后再执行</li><li>这里可以通过<code>cargo check</code>来检验当前版本的编译后的代码，是否还有更新为编译的版本</li></ul><ol start="3"><li>构建发布版本</li></ol><p>通过<code>--release</code>来指定构建的版本为发布版本，通过<code>release</code>来发布，会做很多优化，使rust代码运行更快，但也会让<code>构建时间更长</code>，另外构建发布的时候，这个地方生成的文件是在target下的。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 介绍 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> rust </tag>
+            
+            <tag> cargo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>rust数据结构</title>
       <link href="/2022/12/15/rust-shu-ju-jie-gou/"/>
       <url>/2022/12/15/rust-shu-ju-jie-gou/</url>
