@@ -6,7 +6,7 @@
   <link href="https://qitiandear.github.io/atom.xml" rel="self"/>
   
   <link href="https://qitiandear.github.io/"/>
-  <updated>2022-12-29T06:51:17.935Z</updated>
+  <updated>2023-01-04T02:41:21.371Z</updated>
   <id>https://qitiandear.github.io/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>rust基础</title>
+    <link href="https://qitiandear.github.io/2022/12/30/rust-ji-chu/"/>
+    <id>https://qitiandear.github.io/2022/12/30/rust-ji-chu/</id>
+    <published>2022-12-30T05:12:24.000Z</published>
+    <updated>2023-01-04T02:41:21.371Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;变量，基本类型，函数，注释和控制流，这些几乎是每种编程语言都具有的编程概念。&lt;/p&gt;
+&lt;p&gt;这些基础概念将存在于每个 Rust 程序中，及早学习它们将使你以最快的速度学习 Rust 的使用。&lt;/p&gt;
+&lt;h2 id=&quot;变量和可变性&quot;&gt;&lt;a href=&quot;#变量和可变性&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="变量" scheme="https://qitiandear.github.io/categories/%E5%8F%98%E9%87%8F/"/>
+    
+    <category term="数据类型" scheme="https://qitiandear.github.io/categories/%E5%8F%98%E9%87%8F/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/"/>
+    
+    <category term="函数" scheme="https://qitiandear.github.io/categories/%E5%8F%98%E9%87%8F/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/%E5%87%BD%E6%95%B0/"/>
+    
+    <category term="注释" scheme="https://qitiandear.github.io/categories/%E5%8F%98%E9%87%8F/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/%E5%87%BD%E6%95%B0/%E6%B3%A8%E9%87%8A/"/>
+    
+    
+    <category term="rust" scheme="https://qitiandear.github.io/tags/rust/"/>
+    
+  </entry>
   
   <entry>
     <title>Cargo介绍</title>
