@@ -6,7 +6,7 @@
   <link href="https://qitiandear.github.io/atom.xml" rel="self"/>
   
   <link href="https://qitiandear.github.io/"/>
-  <updated>2023-01-04T02:41:21.371Z</updated>
+  <updated>2023-01-06T06:44:19.990Z</updated>
   <id>https://qitiandear.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vue3常见的使用场景</title>
+    <link href="https://qitiandear.github.io/2023/01/06/vue3-chang-jian-de-shi-yong-chang-jing/"/>
+    <id>https://qitiandear.github.io/2023/01/06/vue3-chang-jian-de-shi-yong-chang-jing/</id>
+    <published>2023-01-06T05:59:33.000Z</published>
+    <updated>2023-01-06T06:44:19.990Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Vue是一套用于构建用户界面的渐进式框架。这篇文章主要学习vue3的新特性和新增的API，主要是有 Vue 2 经验的用户快速熟悉vue3.&lt;/p&gt;
+&lt;h2 id=&quot;父子组件数据传递&quot;&gt;&lt;a href=&quot;#父子组件数据传递&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="使用场景" scheme="https://qitiandear.github.io/categories/%E4%BD%BF%E7%94%A8%E5%9C%BA%E6%99%AF/"/>
+    
+    
+    <category term="vue" scheme="https://qitiandear.github.io/tags/vue/"/>
+    
+    <category term="vue3" scheme="https://qitiandear.github.io/tags/vue3/"/>
+    
+  </entry>
   
   <entry>
     <title>rust基础</title>
