@@ -6,7 +6,7 @@
   <link href="https://qitiandear.github.io/atom.xml" rel="self"/>
   
   <link href="https://qitiandear.github.io/"/>
-  <updated>2023-01-09T06:58:26.550Z</updated>
+  <updated>2023-01-30T08:03:35.634Z</updated>
   <id>https://qitiandear.github.io/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>fly.io基础使用</title>
+    <link href="https://qitiandear.github.io/2023/01/30/fly-io-ji-chu-shi-yong/"/>
+    <id>https://qitiandear.github.io/2023/01/30/fly-io-ji-chu-shi-yong/</id>
+    <published>2023-01-30T07:05:21.000Z</published>
+    <updated>2023-01-30T08:03:35.634Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;fly.io 是一个容器化的部署平台，只需要一个&lt;code&gt;Dockerfile&lt;/code&gt;文件就能部署代码到fly.io</summary>
+        
+      
+    
+    
+    
+    <category term="工具" scheme="https://qitiandear.github.io/categories/%E5%B7%A5%E5%85%B7/"/>
+    
+    
+    <category term="fly.io" scheme="https://qitiandear.github.io/tags/fly-io/"/>
+    
+    <category term="docker" scheme="https://qitiandear.github.io/tags/docker/"/>
+    
+  </entry>
   
   <entry>
     <title>vue3常见的使用场景</title>
