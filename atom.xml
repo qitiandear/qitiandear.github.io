@@ -6,7 +6,7 @@
   <link href="https://qitiandear.github.io/atom.xml" rel="self"/>
   
   <link href="https://qitiandear.github.io/"/>
-  <updated>2023-01-30T08:03:35.634Z</updated>
+  <updated>2023-01-31T08:32:21.542Z</updated>
   <id>https://qitiandear.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>docker简单使用</title>
+    <link href="https://qitiandear.github.io/2023/01/31/docker-jian-dan-shi-yong/"/>
+    <id>https://qitiandear.github.io/2023/01/31/docker-jian-dan-shi-yong/</id>
+    <published>2023-01-31T07:54:41.000Z</published>
+    <updated>2023-01-31T08:32:21.542Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Docker 中有两个重要概念。一个是容器（Container）：容器特别像一个虚拟机，容器中运行着一个完整的操作系统。另一个是镜像（Image）：镜像是一个文件，它是用来创建容器的。&lt;/p&gt;
+&lt;h2 id=&quot;安装-Docker&quot;&gt;&lt;a href=&quot;#安装-Docker&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="基础" scheme="https://qitiandear.github.io/categories/%E5%9F%BA%E7%A1%80/"/>
+    
+    
+    <category term="docker" scheme="https://qitiandear.github.io/tags/docker/"/>
+    
+  </entry>
   
   <entry>
     <title>fly.io基础使用</title>
