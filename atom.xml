@@ -6,7 +6,7 @@
   <link href="https://qitiandear.github.io/atom.xml" rel="self"/>
   
   <link href="https://qitiandear.github.io/"/>
-  <updated>2023-01-31T08:32:21.542Z</updated>
+  <updated>2023-02-23T07:14:37.326Z</updated>
   <id>https://qitiandear.github.io/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Druid UI框架学习1</title>
+    <link href="https://qitiandear.github.io/2023/02/23/druid-ui-kuang-jia-xue-xi-1/"/>
+    <id>https://qitiandear.github.io/2023/02/23/druid-ui-kuang-jia-xue-xi-1/</id>
+    <published>2023-02-23T06:28:52.000Z</published>
+    <updated>2023-02-23T07:14:37.326Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Druid允许您构建可部署在Windows、macOS、Linux和web上的简单交互式图形应用程序。Druid是一个数据驱动的声明性框架。&lt;/p&gt;
+&lt;p&gt;&lt;img</summary>
+        
+      
+    
+    
+    
+    <category term="UI框架" scheme="https://qitiandear.github.io/categories/UI%E6%A1%86%E6%9E%B6/"/>
+    
+    
+    <category term="rust" scheme="https://qitiandear.github.io/tags/rust/"/>
+    
+    <category term="Druid" scheme="https://qitiandear.github.io/tags/Druid/"/>
+    
+    <category term="gui" scheme="https://qitiandear.github.io/tags/gui/"/>
+    
+    <category term="Linux" scheme="https://qitiandear.github.io/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>docker简单使用</title>
