@@ -6,7 +6,7 @@
   <link href="https://qitiandear.github.io/atom.xml" rel="self"/>
   
   <link href="https://qitiandear.github.io/"/>
-  <updated>2023-02-23T07:14:37.326Z</updated>
+  <updated>2023-04-11T06:13:29.519Z</updated>
   <id>https://qitiandear.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>安卓帧动画oom优化</title>
+    <link href="https://qitiandear.github.io/2023/04/11/an-zhuo-zheng-dong-hua-oom-you-hua/"/>
+    <id>https://qitiandear.github.io/2023/04/11/an-zhuo-zheng-dong-hua-oom-you-hua/</id>
+    <published>2023-04-11T05:43:07.000Z</published>
+    <updated>2023-04-11T06:13:29.519Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;帧动画非常容易理解，其实就是简单的由N张静态图片收集起来，然后我们通过控制依次显示</summary>
+        
+      
+    
+    
+    
+    <category term="帧动画" scheme="https://qitiandear.github.io/categories/%E5%B8%A7%E5%8A%A8%E7%94%BB/"/>
+    
+    
+    <category term="Android" scheme="https://qitiandear.github.io/tags/Android/"/>
+    
+  </entry>
   
   <entry>
     <title>Druid UI框架学习1</title>
