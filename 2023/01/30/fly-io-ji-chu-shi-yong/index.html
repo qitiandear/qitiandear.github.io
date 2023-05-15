@@ -382,11 +382,11 @@
 </blockquote>
 <h3 id="Docker-Desktop-for-windows方式"><a href="#Docker-Desktop-for-windows方式" class="headerlink" title="Docker Desktop for windows方式"></a>Docker Desktop for windows方式</h3><p>Docker 也专门开发了可以使用 WSL2 中的 Docker 守护进程的桌面管理程序, 打开 Docker Desktop WSL2 backend 页面，下载最新的 Docker Desktop for Windows 程序 ，建议下载stable版本。下载地址：<a target="_blank" rel="noopener" href="https://www.docker.com/products/docker-desktop">https://www.docker.com/products/docker-desktop</a></p>
 <p>启动Docker Desktop for Windows，点击“设置”按钮，启用基于WSL2的引擎复选框（Use the WSL 2 based engine）</p>
-<p><img src="https://kun.nwyp123.com/20230130153846.png"></p>
+<p><img src="https://pic.tianqinote.com/20230130153846.png"></p>
 <p>在 Resources 的WSL Integration中设置要从哪个 WSL2 发行版中访问 Docker，如下图使用的是openEuler</p>
-<p><img src="https://kun.nwyp123.com/20230130153942.png"></p>
+<p><img src="https://pic.tianqinote.com/20230130153942.png"></p>
 <p>重启 Docker desktop for Windows，重启完成后我们就可以在 WSL2里面使用 docker 命令了</p>
-<p><img src="https://kun.nwyp123.com/20230130154048.png"></p>
+<p><img src="https://pic.tianqinote.com/20230130154048.png"></p>
 <h2 id="部署静态网站"><a href="#部署静态网站" class="headerlink" title="部署静态网站"></a>部署静态网站</h2><p>我作为一个前端部署一个自己的静态网站，使用官方提供的解决方案gostatic部署前端静态页面</p>
 <h3 id="创建Dockerfile文件"><a href="#创建Dockerfile文件" class="headerlink" title="创建Dockerfile文件"></a>创建Dockerfile文件</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">FROM pierrezemb/gostatic
 COPY ./public/ /srv/http/<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
@@ -428,7 +428,7 @@ Your app is ready. Deploy with <span class="token variable"><span class="token v
 
 <h3 id="查看我们的网站"><a href="#查看我们的网站" class="headerlink" title="查看我们的网站"></a>查看我们的网站</h3><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">flyctl <span class="token function">open</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
-<p><img src="https://kun.nwyp123.com/20230130160331.png"></p>
+<p><img src="https://pic.tianqinote.com/20230130160331.png"></p>
 
                 
             </div>

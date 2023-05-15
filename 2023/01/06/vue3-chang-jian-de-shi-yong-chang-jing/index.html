@@ -457,7 +457,7 @@ console<span class="token punctuation">.</span><span class="token function">log<
 <span class="token keyword">const</span> <span class="token punctuation">{</span> proxy <span class="token punctuation">}</span>  <span class="token operator">=</span> <span class="token function">getCurrentInstance</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>这样我们就可以使用 <code>$parent</code> 、<code>$refs</code> 等，干自己想干的事情了，下面是我打印出来的 <code>ctx</code> 的完整属性。</p>
-<p><img src="https://kun.nwyp123.com/20230106144156.png"></p>
+<p><img src="https://pic.tianqinote.com/20230106144156.png"></p>
 <p>注意：<code>ctx</code> 只能在开发环境使用，生成环境为 <code>undefined</code> 。 推荐使用 <code>proxy</code> ，在开发环境和生产环境都可以使用。</p>
 <h2 id="组件之间双向绑定"><a href="#组件之间双向绑定" class="headerlink" title="组件之间双向绑定"></a>组件之间双向绑定</h2><p>Vue3 统一使用 <code>v-model</code> 进行处理，并且可以和多个数据进行绑定，如 <code>v-model:foot</code>、<code>v-model:blue</code></p>
 <p><code>v-model</code> 等价于 <code>:model-value="someValue"</code> 和 <code>@update:model-value="someValue = $event"</code></p>
