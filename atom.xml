@@ -6,7 +6,7 @@
   <link href="https://qitiandear.github.io/atom.xml" rel="self"/>
   
   <link href="https://qitiandear.github.io/"/>
-  <updated>2023-04-11T06:13:29.519Z</updated>
+  <updated>2023-08-22T07:36:18.007Z</updated>
   <id>https://qitiandear.github.io/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>JSDoc使用</title>
+    <link href="https://qitiandear.github.io/2023/08/22/jsdoc-shi-yong/"/>
+    <id>https://qitiandear.github.io/2023/08/22/jsdoc-shi-yong/</id>
+    <published>2023-08-22T07:23:54.000Z</published>
+    <updated>2023-08-22T07:36:18.007Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;JSDoc 提供了向 JavaScript 代码库添加类型的功能，并在注释中使用适当的约定，这样不同的 IDE（如 Visual Studio Code）可以识别定义的类型，显示它们，并通过自动完成使编码更容易。定义放在/** */注释中。&lt;/p&gt;
+&lt;h2</summary>
+        
+      
+    
+    
+    
+    <category term="使用" scheme="https://qitiandear.github.io/categories/%E4%BD%BF%E7%94%A8/"/>
+    
+    
+    <category term="JavaScript" scheme="https://qitiandear.github.io/tags/JavaScript/"/>
+    
+  </entry>
   
   <entry>
     <title>安卓帧动画oom优化</title>
